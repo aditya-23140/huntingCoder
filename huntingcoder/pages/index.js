@@ -25,94 +25,54 @@ export default function Home() {
         <meta name="keyword" content="nextjs, hunting coder, blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script src="/sc.js" strategy="lazyOnload">
+      {/* <Script src="/sc.js" strategy="lazyOnload"> */}
         {/* 
           strategy: examples --> afterInteractive, beforeInteractive (loads script before), lazyOnload (loads script after page load)
          */}
-      </Script>
-      <Image>
+      {/* </Script> */}
+      {/* <Image> */}
         {/* By default lazy loaded and optimizes provided image. */}
-      </Image>
+      {/* </Image> */}
+      <nav className={styles.mainnav}> {/* Class name directly is not allowed instead use className = {styles.yourName} */}
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Hunting Coder</a>
+            Hunting Coder
           </h1>
           <p className={styles.description}>
             A blog for Hunting coders by a hunting coder
           </p>
-
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src="https://nextjs.org/icons/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-              />
-              Deploy now
-            </a>
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.secondary}
-            >
-              Read our docs
-            </a>
+          <div className="blogs">
+            <h2>Popular Blogs</h2>
+            <div className="blogItem">
+              <h3>How to learn JavaScript in 2024?</h3>
+              <p>JavaScript is the language used to design logic for the web</p>
+            </div>
+            <div className="blogItem">
+              <h3>How to learn JavaScript in 2024?</h3>
+              <p>JavaScript is the language used to design logic for the web</p>
+            </div>
+            <div className="blogItem">
+              <h3>How to learn JavaScript in 2024?</h3>
+              <p>JavaScript is the language used to design logic for the web</p>
+            </div>
+            <div className="blogItem">
+              <h3>How to learn JavaScript in 2024?</h3>
+              <p>JavaScript is the language used to design logic for the web</p>
+            </div>
           </div>
         </main>
         <footer className={styles.footer}>
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="https://nextjs.org/icons/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="https://nextjs.org/icons/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
-          <a
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="https://nextjs.org/icons/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Go to nextjs.org →
-          </a>
+          
         </footer>
       </div>
     </>

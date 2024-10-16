@@ -8,11 +8,10 @@
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
-  align-items: center;
+  align-items: top;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  padding: 1.5rem;
   font-family: var(--font-geist-sans);
 }
 
@@ -32,6 +31,10 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+}
+
+.main .title, .main .description {
+  text-align: center;
 }
 
 .main ol {
@@ -162,4 +165,16 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.mainnav ul{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.mainnav ul li{
+  list-style: none;
+  margin: 0 23px;
+  font-weight: bold;
 }
