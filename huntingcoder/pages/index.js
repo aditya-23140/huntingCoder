@@ -3,6 +3,10 @@ import Script from "next/script";
 import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
+{/* 
+  Difference between anchor and link is that anchor is used to navigate to other pages with reloading and link is used to navigate to other pages without refreshing the page.  
+*/}
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,10 +39,10 @@ export default function Home() {
       {/* </Image> */}
       <nav className={styles.mainnav}> {/* Class name directly is not allowed instead use className = {styles.yourName} */}
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link href="/"><li>Home</li></Link>
+           <Link href="/about"><li>About</li></Link>
+           <Link href="/blog"><li>Blog</li></Link>
+           <Link href="/contact"><li>Contact</li></Link>
         </ul>
       </nav>
       <div
