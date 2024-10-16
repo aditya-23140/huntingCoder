@@ -3,6 +3,8 @@ import Script from "next/script";
 import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+//Global CSS can be imported in _app.js only...
+// import "../styles/globals.css";
 import Link from "next/link";
 {/* 
   Difference between anchor and link is that anchor is used to navigate to other pages with reloading and link is used to navigate to other pages without refreshing the page.  
