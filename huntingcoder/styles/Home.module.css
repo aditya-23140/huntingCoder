@@ -37,6 +37,15 @@
   text-align: center;
 }
 
+.title{
+  font-size: 64px;
+  margin: 0;
+}
+
+.description{
+  margin: 0;
+}
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -177,4 +186,12 @@ a.secondary {
   list-style: none;
   margin: 0 23px;
   font-weight: bold;
+}
+
+.myImg{
+  border-radius: 10px;
+}
+
+.imgWrapper{
+  padding: 10px;
 }
