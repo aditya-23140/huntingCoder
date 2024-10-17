@@ -35,14 +35,6 @@ export default function Home() {
         <meta name="keyword" content="nextjs, hunting coder, blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href="/"><li>Home</li></Link>
-           <Link href="/about"><li>About</li></Link>
-           <Link href="/blog"><li>Blog</li></Link>
-           <Link href="/contact"><li>Contact</li></Link>
-        </ul>
-      </nav>
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
@@ -57,7 +49,7 @@ export default function Home() {
             A blog for Hunting coders by a hunting coder
           </p>
           <div className="blogs">
-            <h2>Popular Blogs</h2>
+            <h2>Latest Blogs</h2>
             <div className="blogItem">
               <h3>How to learn JavaScript in 2024?</h3>
               <p>JavaScript is the language used to design logic for the web</p>
