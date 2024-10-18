@@ -11,6 +11,10 @@
   text-align: center;
 }
 
-.blogItem h3{
+.blogItem h3{ 
   cursor: pointer;
+}
+
+.blogItemp{
+  max-width: 45vw;
 }
