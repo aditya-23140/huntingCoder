@@ -14,7 +14,6 @@ const Blog = () => {
     fetch('http://localhost:3000/api/blogs')
         .then(a => a.json())
         .then((parsed) => {
-            console.log(parsed);
             setfirst(parsed);
         });
   }, []);
@@ -26,7 +25,7 @@ const Blog = () => {
         {first.map((blogItem) => {
           return (
             <div className={styles.blogItem} key={blogItem.slug}>
-            <Link href={`blogData/${blogItem.slug}`}>
+            <Link href={`blogpost/${blogItem.slug}`}>
               <h3>{blogItem.title}</h3></Link>
               <p className={styles.blogItemp}>{blogItem.content.substr(0, 140)}...</p>
             </div>
