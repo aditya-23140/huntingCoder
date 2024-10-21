@@ -1,9 +1,11 @@
+"use client"
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useState } from 'react'
 //Slug is used to create dynamic pages...
 import styles from '@/styles/blogpost.module.css'
+import * as fs from 'fs'
 
 //Step 1: Find the file corresponding to the slug
 //Step 2: Populate them inside the page
@@ -23,16 +25,24 @@ const slug = (props) => {
   )
 }
 
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {params: {slug: 'how-to-learn-react'}},
+      {params: {slug: 'how-to-learn-nextjs'}},
+      {params: {slug: 'how-to-learn-javaScript'}},
+    ],
+    fallback: true,
+  }
+}
 //Server side rendering
-
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   //console.log(context.query);
   //const router = useRouter();
-  const { slug } = context.query;
-  let data = await fetch(`http://localhost:3000/api/getBlog?slug=${slug}`);
-  let myBlogs = await data.json();
+  const { slug } = context.params;
+  let myBlogs = await fs.promises.readFile(`blogData/${slug}.json`, 'utf8');
   return {
-    props: { myBlogs },
+    props: { myBlogs: JSON.parse(myBlogs) },
   }
 }
 

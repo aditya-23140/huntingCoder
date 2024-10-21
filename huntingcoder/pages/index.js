@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import Image from "next/image";
+//import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -43,7 +43,9 @@ export default function Home() {
             Hunting Coder
           </h1>
           <div className={styles.imgWrapper}>
-            <Image className={styles.myImg} src="/homeimg.jpg" width={518} height={354} />
+            {/* <Image className={styles.myImg} src="/homeimg.jpg" width={518} height={354} /> */} 
+            {/* cannot use Image with static site generation  */}
+            <img  className={styles.myImg} src="/homeimg.jpg" width={518} height={354} alt="hunting coder"/>
           </div>
           <p className={styles.description}>
             A blog for Hunting coders by a hunting coder
