@@ -31,13 +31,16 @@ export default function Home() {
       >
         <main className={styles.main}>
           <div className={styles.imgWrapper}>
-            <Image className={styles.myImg} src="/homeimg.jpg" width={237} height={158} />
+            <Image
+              className={styles.myImg}
+              src="/homeimg.jpg"
+              width={237}
+              height={158}
+            />
             {/* cannot use Image with static site generation  */}
             {/* <img className={styles.myImg} src="/homeimg.jpg" width={237} height={158} alt="hunting coder" /> */}
           </div>
-          <h1 className={styles.title}>
-            &lt; Hunting Coder /&gt;
-          </h1>
+          <h1 className={styles.title}>&lt; Hunting Coder /&gt;</h1>
           {/* <p className={styles.description}>
             A blog for Hunting coders by a hunting coder.
           </p> */}
@@ -45,7 +48,11 @@ export default function Home() {
             <h2 className={styles.h2}>Latest Blogs</h2>
             <div>
               <h3 className={styles.h3}>How to learn JavaScript in 2024?</h3>
-              <p>JavaScript is the language used to design logic for the web. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque impedit quisquam quod nemo cupiditate.</p>
+              <p>
+                JavaScript is the language used to design logic for the web.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                impedit quisquam quod nemo cupiditate.
+              </p>
               <button className={styles.btn}>Read More</button>
             </div>
             <div>
@@ -65,9 +72,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <footer className={styles.footer}>
-
-        </footer>
+        <footer className={styles.footer}></footer>
       </div>
     </>
   );

@@ -7,14 +7,14 @@
   grid-row-start: 2;
 }
 
-.main *{
+.main * {
   width: 100%;
 }
 
-.main h1{
+.main h1 {
   text-align: center;
 }
 
-.codeH{
+.codeH {
   padding: 30px;
 }

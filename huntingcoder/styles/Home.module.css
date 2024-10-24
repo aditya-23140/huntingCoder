@@ -36,16 +36,17 @@
   grid-row-start: 2;
 }
 
-.main .title, .main .description {
+.main .title,
+.main .description {
   text-align: center;
 }
 
-.title{
+.title {
   font-size: 2.5rem;
   margin: 0;
 }
 
-.description{
+.description {
   margin: 0;
   font-size: 1rem;
   max-width: 50vw;
@@ -181,47 +182,58 @@ a.secondary {
   }
 }
 
-.mainnav ul{
+.mainnav ul {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.mainnav ul li{
+.mainnav ul li {
   list-style: none;
   margin: 0 23px;
   font-weight: bold;
 }
 
-.myImg{
+.myImg {
   width: 157px;
   border-radius: 92px;
 }
 
-.imgWrapper{
+.imgWrapper {
   margin: 0 auto;
   padding: 10px;
 }
 
-.h2{
+.h2 {
   font-size: 2.5rem;
 }
 
-.h3{
+.h3 {
   font-size: 1.5rem;
 }
 
-.btn{
+.btn {
   padding: 7px 10px;
   cursor: pointer;
   border-radius: 6px;
   border: none;
   color: var(--button-secondary);
   background-color: var(--button-primary);
-  transition:background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--button-primary-hover);
   color: var(--button-secondary-hover);
+}
+
+@media only screen and (max-width: 600px) {
+  .mainnav ul li {
+    list-style: none;
+    margin: 0 6px;
+    font-weight: bold;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
 }
